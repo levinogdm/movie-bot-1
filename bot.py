@@ -17,9 +17,9 @@ PRIVATE_CHANNEL_ID = -1004307986554
 # ഫൂട്ടർ മെസ്സേജ്
 FOOTER = "\n\nPowered by Levino"
 
-@app.route('/')
-def home():
-    return "Levino's Movie Bot is running!"
+@@app.route('/healthz')
+def healthz():
+    return "OK", 200
 
 def is_user_joined(user_id):
     try:
