@@ -17,7 +17,7 @@ PRIVATE_CHANNEL_ID = -1004307986554
 # ഫൂട്ടർ മെസ്സേജ്
 FOOTER = "\n\nPowered by Levino"
 
-@@app.route('/healthz')
+@app.route('/healthz')
 def healthz():
     return "OK", 200
 
