@@ -10,5 +10,5 @@ def home():
 def health():
     return "OK", 200
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+def run():
+    app.run(host="0.0.0.0", port=int(__import__("os").environ.get("PORT", 10000)))

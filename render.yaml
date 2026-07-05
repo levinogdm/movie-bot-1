@@ -1,6 +1,6 @@
 services:
   - type: worker
-    name: levino-movie-bot
+    name: levino-bot
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python bot.py"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py

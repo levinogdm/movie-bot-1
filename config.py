@@ -1,8 +1,15 @@
-BOT_TOKEN = "8838381613:AAHhhhgNo_8KIcIGJH5gwQpEc1LDHY4mO4g"
+import os
+from dotenv import load_dotenv
 
-PRIVATE_CHANNEL_ID = -1004307986554
-MAIN_CHANNEL_ID = -1004469439263
+load_dotenv()
 
-FOOTER = " Powered by Levino"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+STRING_SESSION = os.getenv("STRING_SESSION")
 
-AUTO_DELETE_TIME = 120
+PRIVATE_CHANNEL_ID = int(os.getenv("PRIVATE_CHANNEL_ID"))
+MAIN_CHANNEL_ID = int(os.getenv("MAIN_CHANNEL_ID"))
+
+AUTO_DELETE_TIME = int(os.getenv("AUTO_DELETE_TIME", "120"))
+FOOTER = os.getenv("FOOTER", "✨ Powered by Levino")
