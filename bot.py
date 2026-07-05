@@ -32,8 +32,8 @@ def is_user_joined(user_id):
     except:
         return False
 
-# Forwarding from Private to Main
-@bot.channel_post_handler(chat_types=['channel'], func=lambda message: message.chat.id == PRIVATE_CHANNEL_ID)
+# Forwarding from Private to Main (Supports all types)
+@bot.channel_post_handler(chat_types=['channel'], func=lambda message: message.chat.id == PRIVATE_CHANNEL_ID, content_types=['text', 'photo', 'video', 'document', 'audio'])
 def forward_to_main(message):
     bot_username = bot.get_me().username
     caption = message.caption if message.caption else "New Movie Available!"
